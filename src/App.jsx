@@ -8,6 +8,7 @@ import {
   Banknote,
 } from "lucide-react";
 import logo from "./logo.png";
+import n from "./n.jpg";
 
 const App = () => {
   return (
@@ -49,7 +50,7 @@ const App = () => {
             className="min-h-[240px] bg-cover bg-center"
             style={{
               backgroundImage:
-                "url('./src/n.jpg')",
+                `url(${n})`,
             }}
           />
         </div>
