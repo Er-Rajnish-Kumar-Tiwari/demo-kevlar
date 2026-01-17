@@ -22,7 +22,7 @@ const App = () => {
           <div className="flex items-center gap-3">
             <img
               src={logo}
-              alt="Bashtell Logo"
+              alt="Kevlar Defense Logo"
               className="h-10 object-contain"
             />
           </div>
@@ -35,10 +35,10 @@ const App = () => {
         <div className="grid md:grid-cols-2 bg-gradient-to-r from-purple-950 to-pink-400 text-white">
           <div className="p-6 flex flex-col justify-center">
             <h2 className="text-2xl font-bold mb-3">
-              Who is Bashtell?
+              Who is Kevlar Defense?
             </h2>
             <p className="text-sm leading-relaxed text-white/90">
-              Bashtell is your trusted one-stop shop for Cyber Security
+              Kevlar Defense is your trusted one-stop shop for Cyber Security
               Managed Services, Professional Services, and IT consulting.
               We help organizations across the globe stay protected in
               today’s cyber world.
@@ -49,7 +49,7 @@ const App = () => {
             className="min-h-[240px] bg-cover bg-center"
             style={{
               backgroundImage:
-                "url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b')",
+                "url('./src/n.jpg')",
             }}
           />
         </div>
@@ -84,7 +84,7 @@ const App = () => {
         {/* Solutions */}
         <div className="px-6 py-6 border-t">
           <h3 className="font-semibold text-lg mb-4 text-purple-950">
-            BASHTell Solutions
+            Kevlar Defense Solutions
           </h3>
 
           <div className="grid md:grid-cols-2 gap-6">
@@ -114,7 +114,7 @@ const App = () => {
         {/* Footer */}
         <div className="bg-gradient-to-r from-purple-950 to-pink-400 text-white px-6 py-6 flex flex-col md:flex-row justify-between gap-4">
           <p className="font-semibold">
-            Sleep easy knowing Bashtell has your back!
+            Sleep easy knowing Kevlar Defense has your back!
           </p>
           <div className="text-sm space-y-1">
             <p>📧 support@kevlardefense.com</p>
