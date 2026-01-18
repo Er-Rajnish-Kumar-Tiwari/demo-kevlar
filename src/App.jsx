@@ -1,99 +1,125 @@
 import React from "react";
+import {
+  Scale,
+  Building2,
+  HeartPulse,
+  Lightbulb,
+  Landmark,
+  Banknote,
+} from "lucide-react";
 import logo from "./logo.png";
+import n from "./n.jpg";
 
-const ThreatResponder = () => {
+const App = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black flex justify-center py-12 px-4">
+    /* FULL PAGE BACKGROUND */
+    <div className="min-h-screen bg-gradient-to-br from-purple-950 via-purple-900 to-pink-400 flex justify-center py-12 px-4">
 
-      {/* MAIN POSTER CARD */}
-      <div className="bg-gradient-to-br from-purple-950 to-pink-500 max-w-4xl w-full rounded-lg shadow-[0_40px_100px_rgba(0,0,0,0.6)] p-6 text-white">
+      {/* MAIN CARD */}
+      <div className="bg-white/95 backdrop-blur max-w-5xl w-full shadow-2xl rounded-2xl overflow-hidden">
 
-        {/* HEADER */}
-        <div className="text-center mb-6">
-          <h1 className="text-3xl font-bold">
-            <span className="text-red-500">+</span>{" "}
-            <span className="text-red-500">Threat</span>
-            <span className="text-gray-200">RESPONDER</span>
-          </h1>
-          <p className="text-sm text-gray-300 mt-2 italic">
-            Gain 361° Threat Visibility™ of Your Enterprise
+        {/* Header */}
+        <div className="flex justify-between items-center px-6 py-4">
+          <div className="flex items-center gap-3">
+            <img
+              src={logo}
+              alt="Kevlar Defense Logo"
+              className="h-10 object-contain"
+            />
+          </div>
+          <p className="text-sm text-pink-500 font-medium">
+            www.kevlardefense.com
           </p>
         </div>
 
-        {/* TOP CONTENT */}
-        <div className="grid md:grid-cols-2 gap-4">
-
-          {/* LEFT IMAGE */}
-          <div className="bg-[#223047] rounded-md p-3">
-            <img
-              src="https://images.unsplash.com/photo-1600267165477-6d4cc741b379"
-              alt="Threat Responder"
-              className="rounded-md w-full object-cover"
-            />
-            <p className="text-xs text-center mt-2 text-gray-300">
-              ThreatRESPONDER™ Platform – Customizable Capabilities
+        {/* Hero Section */}
+        <div className="grid md:grid-cols-2 bg-gradient-to-r from-purple-950 to-pink-400 text-white">
+          <div className="p-6 flex flex-col justify-center">
+            <h2 className="text-2xl font-bold mb-3">
+              Who is Kevlar Defense?
+            </h2>
+            <p className="text-sm leading-relaxed text-white/90">
+              Kevlar Defense is your trusted one-stop shop for Cyber Security
+              Managed Services, Professional Services, and IT consulting.
+              We help organizations across the globe stay protected in
+              today’s cyber world.
             </p>
           </div>
 
-          {/* BENEFITS */}
-          <div className="bg-[#223047] rounded-md p-4 text-sm">
-            <h3 className="font-semibold mb-2 text-red-400">
-              BENEFITS
-            </h3>
-            <ul className="list-disc list-inside space-y-1 text-gray-200">
-              <li>Prevent costly cyber attacks</li>
-              <li>Gain compliance and audit readiness</li>
-              <li>Reduce cost of security operations</li>
-              <li>Improve visibility and response</li>
-              <li>Strengthen enterprise defense</li>
-              <li>Protect intellectual property</li>
-              <li>Enhance brand trust</li>
-            </ul>
-          </div>
-        </div>
-
-        {/* DASHBOARD IMAGE */}
-        <div className="bg-[#223047] rounded-md p-3 mt-4">
-          <img
-            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71"
-            alt="Dashboard"
-            className="rounded-md w-full"
+          <div
+            className="min-h-[240px] bg-cover bg-center"
+            style={{
+              backgroundImage:
+                `url(${n})`,
+            }}
           />
-          <p className="text-xs text-center mt-2 text-gray-300">
-            ThreatRESPONDER™ Security Dashboard
-          </p>
         </div>
 
-        {/* CAPABILITIES */}
-        <div className="bg-[#223047] rounded-md p-4 mt-4 text-sm">
-          <h3 className="font-semibold mb-2 text-red-400">
-            CAPABILITIES / USE CASES
+        {/* Commitment */}
+        <div className="px-6 py-6">
+          <h3 className="font-semibold text-lg mb-4 text-purple-950">
+            Our Commitment
           </h3>
-          <p className="text-gray-200 leading-relaxed">
-            ThreatRESPONDER™ platform detects, responds, and prevents
-            advanced cyber threats across multiple attack vectors.
-            It provides integrated analytics, intelligence, and
-            automation to identify and neutralize threats in real time.
-          </p>
-
-          <ul className="list-disc list-inside mt-2 space-y-1 text-gray-200">
-            <li>Threat intelligence & correlation</li>
-            <li>Detection & response automation</li>
-            <li>Data forensics & analytics</li>
-            <li>User behavior analysis</li>
-            <li>Advanced reporting & dashboards</li>
-          </ul>
+          <div className="grid md:grid-cols-3 gap-4 text-sm text-gray-700">
+            <p>✔ Proactive cyber security approach</p>
+            <p>✔ Built by experts who understand business needs</p>
+            <p>✔ Reliable support whenever you need it</p>
+          </div>
         </div>
 
-        {/* FOOTER */}
-        <div className="mt-6 bg-gray-300 rounded-md p-4 text-gray-800 text-xs">
-          <div className="flex justify-between items-center">
-            <img src={logo} alt="" className="h-10"/>
-            <p>support@kevlardefense.com  |  +44 734 544 3339</p>
+        {/* Customer Verticals */}
+        <div className="px-6 py-6 border-t">
+          <h3 className="font-semibold text-lg mb-4 text-purple-950">
+            Customer Verticals
+          </h3>
+          <div className="grid grid-cols-3 md:grid-cols-6 gap-5 text-center text-xs">
+            <Vertical icon={<Banknote />} label="Banks & Credit" />
+            <Vertical icon={<Scale />} label="Law Firms" />
+            <Vertical icon={<Building2 />} label="Non-Profit" />
+            <Vertical icon={<HeartPulse />} label="Healthcare" />
+            <Vertical icon={<Lightbulb />} label="Energy" />
+            <Vertical icon={<Landmark />} label="State & Local" />
           </div>
+        </div>
 
-          <div className="mt-2 text-[14px] text-gray-600 leading-relaxed">
-            
+        {/* Solutions */}
+        <div className="px-6 py-6 border-t">
+          <h3 className="font-semibold text-lg mb-4 text-purple-950">
+            Kevlar Defense Solutions
+          </h3>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <SolutionBox
+              title="Professional Services"
+              items={[
+                "Vulnerability Management",
+                "Penetration Testing",
+                "SIEM Management",
+                "Deployment Assistance",
+                "Vulnerability Scanning",
+              ]}
+            />
+
+            <SolutionBox
+              title="Managed Services"
+              items={[
+                "Risk Assessments",
+                "Managed Firewall Service",
+                "Gap Analysis",
+                "Endpoint Detection & Response",
+              ]}
+            />
+          </div>
+        </div>
+
+        {/* Footer */}
+        <div className="bg-gradient-to-r from-purple-950 to-pink-400 text-white px-6 py-6 flex flex-col md:flex-row justify-between gap-4">
+          <p className="font-semibold">
+            Sleep easy knowing Kevlar Defense has your back!
+          </p>
+          <div className="text-sm space-y-1">
+            <p>📧 support@kevlardefense.com</p>
+            <p>📞 +44 734 544 3339</p>
           </div>
         </div>
 
@@ -102,4 +128,28 @@ const ThreatResponder = () => {
   );
 };
 
-export default ThreatResponder;
+/* ---------- Reusable Components ---------- */
+
+const Vertical = ({ icon, label }) => (
+  <div className="flex flex-col items-center gap-2">
+    <div className="w-12 h-12 rounded-full border-2 border-pink-400 flex items-center justify-center text-pink-500">
+      {icon}
+    </div>
+    <p className="text-gray-700">{label}</p>
+  </div>
+);
+
+const SolutionBox = ({ title, items }) => (
+  <div className="border rounded-xl overflow-hidden shadow-sm">
+    <div className="bg-purple-950 text-white px-4 py-2 font-semibold">
+      {title}
+    </div>
+    <ul className="p-4 text-sm list-disc list-inside space-y-1 text-gray-700">
+      {items.map((item, i) => (
+        <li key={i}>{item}</li>
+      ))}
+    </ul>
+  </div>
+);
+
+export default App;
